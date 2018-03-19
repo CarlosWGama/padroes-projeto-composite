@@ -1,25 +1,23 @@
 package exemplo.classes;
 
-public class Pasta {
+import java.util.ArrayList;
 
-	public String nome;
+public class Pasta extends Item {
 	
-	private ArrayList<???> itens = new ArrayList<???>(); 
+	private ArrayList<Item> itens = new ArrayList<Item>(); 
 	
 	public Pasta(String nome) {
 		this.nome = nome;
 	}
 	
-	public String getNome() { return nome; }
-	
 	//Adicionar uma pasta ou arquivo
-	public void adicionarItem(??? item) {
+	public void adicionarItem(Item item) {
 		this.itens.add(item);
 		System.out.println("Item " + item.getNome() + " adicionado a pasta " + nome);
 	}
 	
 	//Remover uma pasta ou arquivo
-	public void removerItem(??? item) {
+	public void removerItem(Item item) {
 		this.itens.remove(item);
 		System.out.println("Item " + item.getNome() + " removido da pasta " + nome);
 	}
@@ -27,7 +25,7 @@ public class Pasta {
 	//Listar o Itens da Pasta
 	public void listarItens() {
 		System.out.println("Itens na pasta " + nome + ":");
-		for (??? item: itens) 
+		for (Item item: itens) 
 			System.out.println(item.getNome());
 	}
 }

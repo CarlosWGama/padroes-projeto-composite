@@ -1,5 +1,6 @@
 package exemplo;
 
+import exemplo.classes.Arquivo;
 import exemplo.classes.Pasta;
 
 public class Main {
